@@ -11,11 +11,6 @@ function createSprites() {
   spriteSetter.createClouds();
   spriteSetter.CreateMountains();
   spriteSetter.createBird();
+  spriteSetter.createPipe();
 }
 //#endregion
-
-requestAnimationFrame(update);
-
-function update() {
-  requestAnimationFrame(update);
-}

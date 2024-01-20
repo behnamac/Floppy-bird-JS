@@ -69,6 +69,22 @@ class SpriteSetter {
       context.drawImage(couldsIMG, could.x, could.y, could.width, could.height);
     };
   }
+
+  createPipe() {
+    let pipeWidth = 30;
+    let pipeHeight = 300;
+    let pipeX = boardWidth;
+    let pipeY = boardHight * 0.001;
+
+    let pipeIMG = new Image();
+    pipeIMG.src = "./Assets/pipe.png";
+    let pipe = new DrawSprite(pipeX, pipeY, pipeWidth, pipeHeight);
+    pipeIMG.onload = () => {
+      context.drawImage(pipeIMG, pipe.x, pipe.y, pipe.width, pipe.height);
+    };
+    let pipeObj = { pipeX, pipeY, pipeIMG, pipeWidth, pipeHeight };
+    return pipeObj;
+  }
 }
 
 export { SpriteSetter };
